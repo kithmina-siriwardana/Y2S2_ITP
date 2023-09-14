@@ -19,7 +19,6 @@ function SupplierPaymentForm(props) {
 
     const [supplierName, setsupplierName] = useState('');
     const [supplierId, setsupplierID] = useState('');
-    //  const [supplierId, setsupplierID] = useState('');
     const [order_ID, setorderID] = useState('');
     const [amount, setamount] = useState('');
     const [transactionDate, settransactionDate] = useState('');
@@ -164,24 +163,6 @@ function SupplierPaymentForm(props) {
 
     return (
         <section className="section">
-
-            {/* Modal Popup */}
-            {/* <Modal show="{show}" onHide="{handleClose}" backdrop="static" keyboard={false} centered>
-                <Modal.Header closeButton>
-                    <Modal.Title>{"popupHead"}</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>{"popupMsg"}</Modal.Body>
-                <Modal.Footer>
-                    <Button variant="primary" >
-                        Yes
-                    </Button>
-                    <Button variant="danger" >
-                        No
-                    </Button>
-                </Modal.Footer>
-            </Modal>
-        */}
-
             <div className="row">
                 <div className="col-12">
                     <div className="card" style={{ padding: "50px" }}>

@@ -15,28 +15,7 @@ function ReportPage() {
 
     const [error, setError] = useState(null);
     const [data, setData] = useState(null);
-
-
-
-    // useEffect(() => {
-    //         const fetchDeliveries = async () => {
-
-    //             const response = await fetch("/api/deliveries/delivery-report");
-    //             const json = await response.json();
-
-    //             if (response.ok) {
-    //                 setData(json)
-
-    //             } else {
-    //                 setError(json.error);
-    //                 console.log(error);
-    //             }
-
-    //         }
-
-    //         fetchDeliveries();
-    // }, [error]);
-
+    
     const exportPdf = () => {
 
         const input = document.getElementById("report");

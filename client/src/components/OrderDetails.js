@@ -44,14 +44,9 @@ function OrderDetails(props) {
 
     useEffect(() => {
         const fetchOrder = async () => {
-            // fetch(`/api/users/${id}`)
-            // .then(res => res.json)
-            // .then(data => setCustomer(data))
             const response = await fetch(`/api/orders/getasingleorder/${id}`)
             const json = await response.json()
-            //console.log(json["name"])
             if (response.ok) {
-                //console.log("json "+json["name"])
                 setOrder(
                     {
                         CustomerID: `${json["CustomerID"]}`,
@@ -220,7 +215,6 @@ function OrderDetails(props) {
             if (!response.ok) {
                 setError(json.error);
                 alert("Insert failed please try again." + error);
-                // + Status + orderId + name + deliveryFeedback + rating
             }
 
             if (response.ok) {
@@ -231,19 +225,9 @@ function OrderDetails(props) {
                 setrating('')
                 setError(null)
 
-                // if (
-                //     !window.confirm(
-                //         "Feedback added successfully"
-                //     )
-                // ) {
-                //     // navigate("/suppliers");
-                //     window.location.reload();
+                
 
-                // }
-
-                // alert("Feedback added succefully")
                 handleShow2()
-                // window.location.reload();
 
             }
 
@@ -252,38 +236,7 @@ function OrderDetails(props) {
 
 
 
-    // //update as completed by user
-    // const handlestatus = async (e) => {
-    //     e.preventDefault();
-
-    //     const response = await fetch(`/api/users/feedbacks/deliveryStatus/${id}`, {
-    //         method: "PATCH",
-    //         body: JSON.stringify({ DelevaryStatus: "Completed" }),
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //         },
-    //     });
-
-    //     const json = await response.json();
-
-    //     if (!response.ok) {
-    //         setError(json.error);
-    //         alert("failed please try again." + error);
-    //     }
-
-    //     if (response.ok) {
-    //         setDeliveryFeedbacks(json.deliveryFeedbacks);
-    //         setError(null);
-
-    //         if (
-    //             !window.confirm(
-    //                 "Congrats! You recived the order"
-    //             )
-    //         ) {
-    //             // navigate("/");
-    //         }
-    //     }
-    // };
+   
 
 
     //* Update the Completed status
@@ -303,9 +256,6 @@ function OrderDetails(props) {
         }
 
         if (response.ok) {
-            // alert(
-            //     "delivery status update as Completed for Order ID : " + orderId
-            // );
 
             handleClose3()
 
@@ -317,28 +267,7 @@ function OrderDetails(props) {
 
 
 
-    // //* Delete deliver records
-    // const handleDeletedeliveryrecode = async () => {
-    //     if (window.confirm("Do you want to delete this delivery records?")) {
-    //         const response = await fetch(`/api/users/feedbacks/${id}`, {
-    //             method: "DELETE",
-    //         });
-
-    //         const json = await response.json;
-
-    //         if (response.ok) {
-    //             alert("Successfully Deleted the delivery records");
-    //             window.location.reload();
-    //         }
-
-    //         if (!response.ok) {
-    //             setError(json.error);
-    //             alert("Failed to remove the delivery records." + error);
-    //             window.location.reload();
-    //         }
-    //     }
-    // };
-
+    
 
     //delete feedback    original correct---------------------------------------------------------
     const handleFeedbackdelete = async (e) => {
@@ -362,12 +291,8 @@ function OrderDetails(props) {
             setError(null);
 
             handleClose()
-
-            // alert("Feedback deleted succefully")
             window.location.reload();
         }
-
-        // }
 
     };
 
@@ -531,12 +456,7 @@ function OrderDetails(props) {
                                                             <h4>Customer ID <small>{CustomerID}</small></h4>
                                                             <h4>Status <small>{Status}</small></h4>
                                                             <h4>Date <small>{Date}</small></h4>
-                                                            {/* <address>
-                                                                <p><strong>Alex Tuntuni</strong></p>
-                                                                <p>1355 Market St, Suite 900 <br />
-                                                                    San Francisco, CA 94103</p>
-                                                                <p>Mobile: (123) 456-7890</p>
-                                                            </address> */}
+                                                            
                                                         </div>
                                                     </div>
                                                 </div>
@@ -572,26 +492,13 @@ function OrderDetails(props) {
                                                 <div class="ltn__myaccount-tab-content-inner">
 
 
-                                                    {/* <div className="pagetitle">
-                                                            <h1>Factory Management</h1>
-                                                            <nav>
-                                                                <ol className="breadcrumb">
-                                                                    <li className="breadcrumb-item">
-                                                                        <a href="index.html">Home</a>
-                                                                    </li>
-                                                                    <li className="breadcrumb-item">Factory</li>
-                                                                    <li className="breadcrumb-item active">Add Factory</li>
-                                                                </ol>
-                                                            </nav>
-                                                        </div> */}
+                                                    
 
                                                     <section class="section">
 
                                                         <div class="card-body , card">
                                                             <h5 class="card-title">Delivery Status</h5>
-                                                            {/* <button style={{ width: 42, marginLeft: 1220, marginTop: -50, marginBottom: 50, backgroundColor: "transparent", color: "blue" }} type="button" class="btn btn-link" onClick={handleDeletedeliveryrecode}>
-                                                                <i class="bi bi-trash3"></i>
-                                                            </button> */}
+
                                                             <div class="progress" style={{ height: "25px" }}>
                                                                 <div
                                                                     style={{ style: "width:x%", height: "25px" }}
@@ -649,28 +556,9 @@ function OrderDetails(props) {
                                                                     <div className="card-body">
                                                                         <h5 className="card-title">{updateOrInsert} your feedback</h5>
 
-                                                                        {/* {error && (
-                                                                        <div
-                                                                            className="alert alert-danger alert-dismissible fade show"
-                                                                            role="alert"
-                                                                        >
-                                                                            {error}
-                                                                            <button
-                                                                                type="button"
-                                                                                className="btn-close"
-                                                                                data-bs-dismiss="alert"
-                                                                                aria-label="Close"
-                                                                            ></button>
-                                                                        </div>
-                                                                    )} */}
+                                                                       
 
                                                                         {/* <!-- Vertical Form --> */}
-
-
-
-
-
-
 
                                                                         <form className="row g-3" onSubmit={handleFeedbackUpdate}>
 
@@ -762,21 +650,7 @@ function OrderDetails(props) {
                                                                             </div>
 
                                                                             <div className="col-12">
-                                                                                {/* <label for="inputFName" className="form-label">
-                                                                                Name
-                                                                            </label>
-                                                                            <input
-                                                                                // style={{ height: 100 }}
-                                                                                type="text"
-                                                                                className="form-control"
-                                                                                id="deliveryFeedbacks"
-                                                                                onChange={(e) => {
-                                                                                    setName(e.target.value);
-                                                                                }}
-                                                                                value={DeliveryFeedback}
-                                                                                required
-                                                                                disabled={isDisable}
-                                                                            /> */}
+                                
                                                                             </div>
 
 
@@ -784,7 +658,6 @@ function OrderDetails(props) {
                                                                                 type="submit"
                                                                                 className="btn btn-primary"
                                                                                 style={{ alignItems: 'center', marginLeft: "18px" }}
-                                                                                // onClick={handleFeedbackUpdate}
                                                                                 disabled={isDisable}
                                                                             >{updateOrInsert} Feedback
                                                                             </button>
@@ -817,36 +690,7 @@ function OrderDetails(props) {
 
 
 
-                                                    {/* <div class="ltn__form-box">
-                                                        <form >
-                                                            <div class="row mb-50">
-                                                                <div class="col-md-6">
-                                                                    <label>Name:</label>
-                                                                    <input type="text" name="ltn__name"
-                                                                    />
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <label>Email:</label>
-                                                                    <input type="email" name="ltn__email"
-                                                                    />
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <label>Phone:</label>
-                                                                    <input type="text" name="ltn__phone"
-                                                                    />
-                                                                </div>
-                                                                <div class="col-md-12">
-                                                                    <label>Address:</label>
-                                                                    <input type="text" name="ltn__email"
-                                                                    />
-                                                                </div>
-                                                            </div>
-                                                            <div class="btn-wrapper">
-                                                                <button type="submit" class="btn theme-btn-1 btn-effect-1 text-uppercase">Save Changes</button>
-                                                            </div>
-                                                        </form>
-                                                    </div> */}
-
+                                                    
 
 
 
@@ -863,7 +707,6 @@ function OrderDetails(props) {
 
                                                                 </div>
                                                                 <button type="button" class="btn btn-danger" onClick={handleShow} style={{ marginTop: 30 }}>
-                                                                    {/* <FontAwesomeIcon icon="fa-solid fa-trash" /> */}
                                                                     delete
                                                                 </button>
 
@@ -891,7 +734,6 @@ function OrderDetails(props) {
 
                             </div>
                         </div>
-                        {/* <!-- PRODUCT TAB AREA END --> */}
                     </div>
                 </div>
             </div>

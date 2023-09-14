@@ -37,7 +37,6 @@ function Trackbodysample(props) {
         const fetchDeliveryFeedback = async () => {
           const response = await fetch(`/api/users/feedbacks/${id}`)
           const json = await response.json()
-          //console.log(json["name"])
           if (response.ok) {
             console.log("json "+json["orderId"])
             setDeliveryFeadback(

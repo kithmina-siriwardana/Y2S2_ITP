@@ -114,51 +114,6 @@ const getAccountUsage = async (req, res) => {
         }
     });
     const grouped = groupBy(users, user => user.phone);
-    // dataset.splice(0, 0, { month: currentYear - 1 + "-01", users: 0 });
-    // dataset.forEach((element, index) => {
-    //     aindex = index
-    //     if (!first) {
-    //         year = parseInt(dataset[index - 1].month.slice(0, 4))
-    //         currentyear = parseInt(dataset[index - 1].month.slice(0, 4))
-    //         previousMonth = parseInt(dataset[index - 1].month.slice(5, 7))
-    //         currentMonth = parseInt(dataset[index].month.slice(5, 7))
-
-    //         if (year !== currentYear) {
-    //             for (var month = previousMonth + 1; month <= 12; month++) {
-    //                 if (month < 10) {
-    //                     dataset.splice(aindex, 0, { month: year + "-0" + month, users: 0 });
-    //                     aindex += 1
-    //                 } else {
-    //                     dataset.splice(aindex, 0, { month: year + "-" + month, users: 0 });
-    //                     aindex += 1
-    //                 }
-    //             }
-    //             year += 1
-    //         } else {
-    //             if (previousMonth == 12) {
-    //                 if (currentMonth + 12 - previousMonth !== 1) {
-    //                     year += 1
-    //                     currentMonth = 1
-    //                     dataset.splice(index, 0, { month: year + "-" + currentMonth, users: 0 });
-    //                 }
-    //             } else {
-    //                 if (currentMonth - previousMonth !== 1) {
-    //                     for (previousMonth; previousMonth < currentMonth; previousMonth++) {
-    //                         if (previousMonth < 10) {
-    //                             dataset.splice(aindex, 0, { month: year + "-0" + previousMonth, users: 0 });
-    //                         } else {
-    //                             dataset.splice(aindex, 0, { month: year + "-" + previousMonth, users: 0 });
-    //                         }
-
-    //                         aindex += 1
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //         // console.log(year+" "+month)
-    //     }
-    //     first = false
-    // })
     res.status(200).json(dataset)
 }
 

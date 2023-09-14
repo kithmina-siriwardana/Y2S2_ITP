@@ -170,21 +170,7 @@ function FinancialOverview() {
             ]
         }
     )
- /*  const printReport = (e) => {
-        e.preventDefault();
-        
-        const input = document.getElementById('ss');
-        html2canvas(input)
-            .then((canvas) => {
-                const imgData = canvas.toDataURL('image/png');
-                const pdf = new jsPDF();
-                pdf.addImage(imgData, 'JPEG', 0, 0,);
-                // pdf.output('dataurlnewwindow');
-                pdf.save("FinancialReport.pdf");
-            })
-            ;
-    }*/
-
+ 
     const printReport = (e) => {
         e.preventDefault();
         const input = document.getElementById("ss");

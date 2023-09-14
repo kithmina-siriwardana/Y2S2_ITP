@@ -6,7 +6,6 @@ function Deliveriescompleted(props) {
   const [orders, setOrders] = useState(props.orders);
   const { id } = useParams();
   const navigate = useNavigate();
-  // const complete = "Pending";
 
   useEffect(() => { setOrders(props.orders) }
     , [props.orders])
@@ -97,11 +96,7 @@ function Deliveriescompleted(props) {
 
                       <th scope="col">T/P</th>
                       <th scope="col">Date</th>
-                      {/* <th scope="col">Date</th> */}
                       <th scope="col">Delivery Status</th>
-                      {/* <th scope="col">Feedback</th> */}
-                      {/* <th scope="col">Delivering</th> */}
-                      {/* <th scope="col">Completed</th> */}
                     </tr>
                   </thead>
                   <tbody style={{ fontSize: 15 }}>
@@ -115,41 +110,6 @@ function Deliveriescompleted(props) {
                           <td>{order.Phone}</td>
                           <td>{order.Date}</td>
                           <td>{order.DelevaryStatus}</td>
-                          {/* <td>{order.Date}</td> */}
-                          {/* <td>
-                            <button
-                              type="button"
-                              class="btn btn-danger"
-                              onClick={() => {
-                                handleUpdatepackaging(delivery._id);
-                              }}
-                            >
-                              <i class="bi bi-box"></i>
-                            </button>
-                          </td> */}
-                          {/* <td>
-                            <button type="button" class="btn btn-warning" onClick={() => {
-                              handleUpdateontheway(order._id);
-                            }}>
-                              <i style={{ color: "white" }} class="bi bi-truck-front-fill"></i>
-                            </button>
-                          </td> */}
-                          {/* <td><button type="button" class="btn btn-success">Completed</button></td> */}
-                          {/* <td>
-                            <button type="button" class="btn btn-success" onClick={() => {
-                              handleUpdateCompleted(order._id);
-                            }}>
-                              <i class="bi bi-check2-square"></i>
-                            </button>
-                          </td> */}
-
-                          {/* <td>
-                            <Link
-                              to={{ pathname: `/${order._id}/trackorder` }}
-                            >
-                              u
-                            </Link>
-                          </td> */}
                         </tr>
                       ))}
                   </tbody>
@@ -159,7 +119,6 @@ function Deliveriescompleted(props) {
             </div>
           </div>
         </div>
-        {/* style={{display: "none" , visibility: "hidden"}} */}
       </section>
     </main>
   );

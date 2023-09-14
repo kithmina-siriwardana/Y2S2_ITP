@@ -69,7 +69,6 @@ function Customers() {
       const response = await fetch(`/api/site-feedbacks/private`)
       const json = await response.json()
       console.log(json)
-      //console.log(json[0])
       if (response.ok) {
         setPrivateSiteFeedbacks(json)
       }
@@ -85,7 +84,6 @@ function Customers() {
       const response = await fetch(`/api/site-feedbacks/public`)
       const json = await response.json()
       console.log(json)
-      //console.log(json[0])
       if (response.ok) {
         setPublicSiteFeedbacks(json)
       }
@@ -152,7 +150,6 @@ function Customers() {
           </ol>
         </nav>
       </div>
-      {/* <!-- End Page Title --> */}
 
       <section className="section">
         <div className="row">
@@ -162,7 +159,6 @@ function Customers() {
               <div className="card-body">
                 <h5 className="card-title">Public Feedbacks</h5>
 
-                {/* <!-- Default Table --> */}
                 <table className="table">
                   <thead>
                     <tr>
@@ -207,7 +203,6 @@ function Customers() {
                     ))}
                   </tbody>
                 </table>
-                {/* <!-- End Default Table Example --> */}
               </div>
             </div>
           </div>
@@ -267,7 +262,6 @@ function Customers() {
                     ))}
                   </tbody>
                 </table>
-                {/* <!-- End Default Table Example --> */}
               </div>
             </div>
           </div>

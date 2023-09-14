@@ -164,38 +164,9 @@ function Employees() {
                         <td><Link to={{ pathname: `/employee/${staff._id}` }}>View Profile</Link></td>
                       </tr>
                     ))}
-                    {/* {staffs && staffs.map((staff) => (
-                      <tr key={staff._id}>
-                        <th scope="row">{staff._id}</th>
-                        <td>{staff.name}</td>
-                        <td>{staff.dob}</td>
-                        <td>{staff.role}</td>
-                        <td>{staff.email}</td>
-                        <td>{staff.phone}</td>
-                        <td><Link to={{ pathname: `/employee/${staff._id}` }}>View Profile</Link></td>
-                      </tr>
-                    ))} */}
+                    
                   </tbody>
                 </table>
-                {/* <!-- End Default Table Example --> */}
-                {/* <button class= "btn btn-primary" onClick={() => generatePDF(
-          staffs.map(m => ({
-            name: m.name,
-            dob: m.dob,
-            role:m.role,
-            email: m.email,
-            phone: m.phone
-          }
-          )), columnNames, false, "employeeReport")} >Generate Filtered Report</button>
-          <button class= "btn btn-primary" onClick={() => generatePDF(
-          filteredStaffs.map(m => ({
-            name: m.name,
-            dob: m.dob,
-            role:m.role,
-            email: m.email,
-            phone: m.phone
-          }
-          )), columnNames, false, "employeeReport")} >Generate Report</button> */}
               </div>
             </div>
           </div>

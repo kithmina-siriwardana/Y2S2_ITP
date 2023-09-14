@@ -10,7 +10,6 @@ function CustomerProductOverviewContent(){
 
 
   const [quantityERR,setQuantityERR]=useState({});
-    //const[noProducts, setNoProducts]=useState(0)
 
     const formValidation = () =>{
        const quantityERR = {};
@@ -30,7 +29,6 @@ function CustomerProductOverviewContent(){
   const id = pathname.split("/")[2]
 
   const [count,setCount] = useState(1);
-  //const [time,setTime] = useState(now);
 
   function increase(){
   
@@ -159,12 +157,6 @@ function CustomerProductOverviewContent(){
                
            }
        })
-     
-       //const [apiData,setTempData] = useState([]);
-      
-       
-       //console.log("ssssssssssssssssssssssssss")
-     //  window.location = "/account"
      }
     
     return(

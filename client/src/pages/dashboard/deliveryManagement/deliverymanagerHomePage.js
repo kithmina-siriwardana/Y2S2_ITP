@@ -99,10 +99,7 @@ function DeliverymanagerHomePage() {
             </div>
 
             <DeliveryList orders={deliveries}/>
-            {/* <iframe width="640" height="480" src="https://charts.mongodb.com/charts-project-0-btwsw/embed/charts?id=63614faa-09bd-408c-822f-a76c64d1ce32&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
-            <iframe width="640" height="480" src="https://charts.mongodb.com/charts-project-0-btwsw/embed/charts?id=63614052-680d-49c0-85ef-9be133ad6fda&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
-            <iframe  width="640" height="480" src="https://charts.mongodb.com/charts-project-0-btwsw/embed/dashboards?id=fb4ab6db-c4a7-425e-8ef3-40c3bdfdba62&theme=light&autoRefresh=true&maxDataAge=3600&showTitleAndDesc=false&scalingWidth=fixed&scalingHeight=fixed"></iframe> */}
-</main>
+            </main>
             <Footer />
             <a href="#" 
             className="back-to-top d-flex align-items-center justify-content-center">

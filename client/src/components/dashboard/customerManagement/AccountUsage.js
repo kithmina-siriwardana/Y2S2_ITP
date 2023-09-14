@@ -53,7 +53,6 @@ function AccountUsage() {
                 const imgData = canvas.toDataURL('img/svg');
                 const pdf = new jsPDF('p', 'mm', 'a4');
                 pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
-                // pdf.output('dataurlnewwindow');
                 pdf.save("usage-report.pdf");
             });
     }
@@ -67,7 +66,6 @@ function AccountUsage() {
                 const imgData = canvas.toDataURL('img/svg');
                 const pdf = new jsPDF('p', 'mm', 'a4');
                 pdf.addImage(imgData, 'JPEG', 0, 0, imgWidth, imgHeight);
-                // pdf.output('dataurlnewwindow');
                 pdf.save("oldAccounts.pdf");
             });
     }
@@ -75,7 +73,6 @@ function AccountUsage() {
     useEffect(() => {
         const fetchChartData = async () => {
             const { data } = await axios.get(`/api/users/usage`)
-            //console.log(data)
             console.log(data.map((item) => item.month))
 
             setChartData({
@@ -103,7 +100,6 @@ function AccountUsage() {
             const response = await fetch(`/api/users/old-users`)
             const json = await response.json()
             console.log(json)
-            //console.log(json[0])
             if (response.ok) {
                 setCustomers(json)
             }

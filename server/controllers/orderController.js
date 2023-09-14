@@ -104,23 +104,6 @@ const updateOrder = async (req, res) => {
     }
 }
 
-// const updateOrder = async (req, res) => {
-//     const order = await Order.findById(req.params.id);
-
-//     if (order) {
-//         order.isDelivered = true;
-//         order.deliveredAt = Date.now();
-//         order.deliveryStatus = "Delivered";
-
-//         const updatedOrder = await order.save();
-
-//         res.json(updatedOrder);
-//     } else {
-//         res.status(404);
-//         throw new Error('Order not found');
-//     }
-// }
-
 //Update order as delivering
 const updateOrderasdelivering = async (req, res) => {
     updateStatus = {
@@ -134,7 +117,6 @@ const updateOrderasdelivering = async (req, res) => {
     
      
     .then((order) => res.status(200).json(order))
-    // .catch((err) => res.status(400).send(err));
     var email = "tomcity123456@gmail.com"
     sendEmail(email, 'Order Delivering', `Your order ${req.params.id} is delivering`)   
     
@@ -157,7 +139,6 @@ const updateOrderascompleted = async (req, res) => {
 //Reject an order
 const rejectOrder = async (req, res) => {
     const order = await Order.findById(req.params.id);
-    // var email = req.params.email;
     sendEmail("sahanpradeeptha@gmail.com", 'Your order is on hold', `We're sorry to say your order is on hold due to unavoidable reason. Sorry for the inconvenience made. Feel free to contact us `)
     sendEmail("it21018596@my.sliit.lk", 'Your order is on hold', `We're sorry to say your order is on hold due to unavoidable reason. Sorry for the inconvenience made. Feel free to contact us `)
     if (order) {
@@ -176,7 +157,6 @@ const rejectOrder = async (req, res) => {
 const getPackagingOrders = async (req, res) => {
     Order
     .find({$and: [ { Status: "Packaged" }, { DelevaryStatus: "Not shipped" }]})
-    // .find({DelevaryStatus: "Not Shipped"})
     .then(orders=>{res.status(200).json(orders)});
 }
 

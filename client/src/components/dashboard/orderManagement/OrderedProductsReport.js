@@ -58,28 +58,6 @@ function OrderedProductsCount(){
     fetchProduct()
     
   })
-  //cheching product name
-  //const checkProductName = async(_id)=>{
-  //  let foundProduct = {};
-
-  //  for(let i=0; i<products.length; i++){
-     //   if(products[i]._id === _id){
-       //     foundProduct = products[i].product_name
-        //    console.log(foundProduct, "fffffffffffffffffffffffffffffffffffffffffffff");
-       // }
-    //}
-    //checkProductName();
- // }
- //let productsNames = [];
- //for (let i=0; i<products.length; i++){
-  //  for(let j=0; j<data.length; j++){
-    //    if (products[i]._id === data[j]._id){
-       //     productsNames.push(products[i].product_name)
-
-       // }
-  //  }
-// }
-
 
 
     return (

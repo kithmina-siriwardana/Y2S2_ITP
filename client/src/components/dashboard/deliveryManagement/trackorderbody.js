@@ -26,7 +26,6 @@ function Bodycontent(props) {
         const fetchDeliveryFeedback = async () => {
           const response = await fetch(`/api/users/feedbacks/${id}`)
           const json = await response.json()
-          //console.log(json["name"])
           if (response.ok) {
             console.log("json "+json["orderId"])
             setDeliveryFeadback(
@@ -257,18 +256,6 @@ const handlestatus = async (e) => {
                 marginLeft: 370,
             }}
         >
-            {/* <div className="pagetitle">
-                <h1>Factory Management</h1>
-                <nav>
-                    <ol className="breadcrumb">
-                        <li className="breadcrumb-item">
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li className="breadcrumb-item">Factory</li>
-                        <li className="breadcrumb-item active">Add Factory</li>
-                    </ol>
-                </nav>
-            </div> */}
 
             <section class="section">
                 
@@ -423,7 +410,6 @@ const handlestatus = async (e) => {
                                                                 type="button"
                                                                 className="btn btn-danger"
                                                                 style={{ margin: "20px" }}
-                                                                // onClick={handleDelete}
                                                                 disabled={isDisable}
                                                             >
                                                                 Delete

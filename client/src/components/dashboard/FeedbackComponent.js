@@ -10,7 +10,6 @@ function FeedbackComponent() {
             const response = await fetch(`/api/site-feedbacks/public`)
             const json = await response.json()
             console.log(json)
-            //console.log(json[0])
             if (response.ok) {
                 setPublicSiteFeedbacks(json)
             }

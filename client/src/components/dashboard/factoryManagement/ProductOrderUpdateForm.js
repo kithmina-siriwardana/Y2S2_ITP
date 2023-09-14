@@ -1,14 +1,11 @@
 import React from 'react';
-// import { useParams } from 'react-router-dom'
 
 const ProductOrderUpdateForm = (ID) => {
 
-    //const { id } = useParams()
     console.log(ID)
     var pID = ID
 
     const handleUpdateSubmit = async (id) => {
-        // e.preventDefault()
 
         const response = await fetch('http://localhost:5000/api/inventoryProductOrder/' + id, {
 

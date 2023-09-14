@@ -37,7 +37,6 @@ function CustomerAccount() {
     });
 
     console.log("User log " + user)
-    //var customer = null
     const [customer, setCustomer] = useState(
         {
             email: "",
@@ -52,14 +51,9 @@ function CustomerAccount() {
 
     useEffect(() => {
         const fetchCustomer = async () => {
-            // fetch(`/api/users/${id}`)
-            // .then(res => res.json)
-            // .then(data => setCustomer(data))
             const response = await fetch(`/api/users/${user.id}`)
             const json = await response.json()
-            //console.log(json["name"])
             if (response.ok) {
-                //console.log("json "+json["name"])
                 setCustomer(
                     {
                         email: `${json["email"]}`,
@@ -348,7 +342,6 @@ function CustomerAccount() {
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        {/* <!-- PRODUCT TAB AREA START --> */}
                         <div class="ltn__product-tab-area">
                             <div class="container">
                                 <div class="row">
@@ -562,7 +555,6 @@ function CustomerAccount() {
                                 </div>
                             </div>
                         </div>
-                        {/* <!-- PRODUCT TAB AREA END --> */}
                     </div>
                 </div>
             </div>

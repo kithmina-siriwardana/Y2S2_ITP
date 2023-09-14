@@ -3,15 +3,7 @@ import { useState, useEffect } from 'react';
 
 import Chart from 'react-apexcharts';
 
-// import {
-//   BarChart,
-//   Bar,
-//   XAxis,
-//   YAxis,
-//   CartesianGrid,
-//   Tooltip,
-//   Legend
-// } from "recharts";
+
 
 
 

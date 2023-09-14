@@ -83,14 +83,11 @@ const RawInsertForm = () => {
         <Modal.Header closeButton>
           <Modal.Title>Data inserted Successfully</Modal.Title>
         </Modal.Header>
-        {/* <Modal.Body>Are you sure want to set this order as Completed?</Modal.Body> */}
         <Modal.Footer>
           <Button variant="primary" onClick={() => { window.location.reload() }}>
             Okay
           </Button>
-          {/* <Button variant="danger" onClick={(handleClose)}>
-            No
-          </Button> */}
+          
         </Modal.Footer>
       </Modal>
 
@@ -149,9 +146,7 @@ const RawInsertForm = () => {
                         <option key={rawMaterial.raw_material_name} value={rawMaterial.raw_material_name}>{rawMaterial.raw_material_name}</option>
                       ))}
 
-                      {/* <option value="Fertilizer">Fertilizer</option>
-                      <option value="Urea">Urea</option>
-                      <option value="Coconut Husk">Coconut Husk</option> */}
+                      
 
                     </select>
                   </div>

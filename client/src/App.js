@@ -140,11 +140,7 @@ function App() {
                 <Route path="/add-customer" element={localStorage.getItem('employee')?<CustomerAddPage />:<Navigate to='/not-authorized'/>}/>
                 <Route path="/profile-usage" element={localStorage.getItem('employee')?<AccountUsagePage />:<Navigate to='/not-authorized'/>}/>
                 <Route path="/site-feedbacks" element={localStorage.getItem('employee')?<SiteFeedbackPage />:<Navigate to='/not-authorized'/>}/>
-                <Route path="/old-profiles" element={localStorage.getItem('employee')?<OldAccountsPage />:<Navigate to='/not-authorized'/>}/>
-
-
-
-              
+                <Route path="/old-profiles" element={localStorage.getItem('employee')?<OldAccountsPage />:<Navigate to='/not-authorized'/>}/>         
           
 
 

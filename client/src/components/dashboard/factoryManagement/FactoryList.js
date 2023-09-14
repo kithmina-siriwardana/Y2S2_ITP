@@ -41,10 +41,7 @@ function Factory() {
             <div className="card">
               <div className="card-body">
                 <h5 className="card-title">All Factories
-                  {/* <div style={{ display: "flex", justifyContent: "right", alignItems: "right" }}>
-                    <button type="button" class="btn btn-outline-primary" onClick={() => navigate("/add-factory")}>Add New Factory
-                    </button>
-                    </div> */}
+                  
                     </h5>
 
                 {/* <!-- Default Table --> */}

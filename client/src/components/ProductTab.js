@@ -1,5 +1,6 @@
 import React from 'react';
 
+// This module is for testing purposes (checking html and css)
 function ProoductTab() {
     return(
         <div className="ltn__product-tab-area ltn__product-gutter pt-115 pb-70">

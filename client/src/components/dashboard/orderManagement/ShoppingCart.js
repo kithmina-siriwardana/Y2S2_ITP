@@ -62,13 +62,6 @@ const count=5;
                         <div class="shoping-cart-inner">
                             <div class="shoping-cart-table table-responsive">
                                 <table class="table">
-                                    {/*  <thead>
-                                <th class="cart-product-remove">Remove</th>
-                                <th class="cart-product-image">Image</th>
-                               <th class="cart-product-info">Product</th>
-                                <th class="cart-product-price">Price</th>
-                                <th class="cart-product-quantity">Quantity</th>
-                                <th class="cart-product-subtotal">Subtotal</th> </thead>  */}
                                     <tbody>
                                         {apiData.map((data) => {
                                             totalCartPrice += data.unit_price * data.quantity;

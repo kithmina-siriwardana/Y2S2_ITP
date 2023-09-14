@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-//import ProductOrderUpdateForm from './ProductOrderUpdateForm';
 
 function OrderRequest() {
 
@@ -121,9 +120,7 @@ function OrderRequest() {
                         <td>{orderReq.status}</td>
                         <td>
                           <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                            {/* <ProductOrderUpdateForm id={orderReq._id}/> */}
-                            {/* <button type="button" class="btn btn-success" onClick={() => { handleUpdateSubmit(orderReq._id) }}><i class="bi bi-check-circle"></i></button> */}
-
+                            
                             <button type="button" class="btn btn-success" onClick={() => { setId(orderReq._id); handleShow() }}><i class="bi bi-check-circle"></i></button>
                           </div>
                         </td>

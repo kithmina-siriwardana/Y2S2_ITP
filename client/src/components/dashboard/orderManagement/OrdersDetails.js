@@ -48,23 +48,7 @@ export default function OrderDetails() {
         setApiData(getData.data);
       })
   })
-
-
-
-  //const onDelete =(_id)=>{
-  //  console.log("DELETEDDDDDDDDDDDDDDDDD")
-  //  axios.patch(`/api/v6/orders/reject/${_id}`)
-  //    .then(()=>{  
-  //    })
-  //    toast.error(`Order ID:${_id} rejected`,{
-  //        position: "bottom-left",
-
-  //    });
-  //  }
-
-
-  ///////////////////////////////Updating order
-  //To dialog box
+  
   const [dialog, setDialog] = useState({
     message: "",
     isLoading: false,

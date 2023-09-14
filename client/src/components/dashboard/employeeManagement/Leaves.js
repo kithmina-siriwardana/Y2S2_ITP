@@ -11,8 +11,6 @@ function Leaves() {
   const [searchTerm, setSearchTerm] = useState("")
   const [searchCategory, setSearchCategory] = useState("")
 
-  // const columnNames = [{ description: "Description", startDate: "StartDate", endDate: "EndDate", type: "Type" }]
-
   useEffect(() => {
     const fetchLeaves = async () => {
       const response = await fetch(`/api/leaves`)
@@ -165,15 +163,7 @@ function Leaves() {
                     ))}
                   </tbody>
                 </table>
-                {/* <!-- End Default Table Example --> */}
-                {/* <button class="btn btn-primary" onClick={() => generatePDF(
-                  filteredLeaves.map(m => ({
-                    description: m.description,
-                    startDate: m.startDate,
-                    endDate: m.endDate,
-                    type: m.type
-                  }
-                  )), columnNames, false, "LeaveReport")} >Generate Report</button> */}
+                
               </div>
             </div>
           </div>

@@ -87,7 +87,6 @@ function Customers() {
       const response = await fetch(`/api/users`)
       const json = await response.json()
       console.log(json)
-      //console.log(json[0])
       if (response.ok) {
         setCustomers(json)
       }
@@ -148,14 +147,10 @@ function Customers() {
         <Modal.Header closeButton>
           <Modal.Title>Customer Added Successfully</Modal.Title>
         </Modal.Header>
-        {/* <Modal.Body>Are you sure want to set this order as Completed?</Modal.Body> */}
         <Modal.Footer>
           <Button variant="primary" onClick={() => { window.location.reload() }}>
             Okay
           </Button>
-          {/* <Button variant="danger" onClick={(handleClose)}>
-            No
-          </Button> */}
         </Modal.Footer>
       </Modal>
 
@@ -270,7 +265,6 @@ function Customers() {
                   searchCategory={getSearchCategory}
                 />
 
-                {/* <!-- Default Table --> */}
                 <table className="table">
                   <thead>
                     <tr>
@@ -321,7 +315,6 @@ function Customers() {
                     ))}
                   </tbody>
                 </table>
-                {/* <!-- End Default Table Example --> */}
               </div>
             </div>
           </div>

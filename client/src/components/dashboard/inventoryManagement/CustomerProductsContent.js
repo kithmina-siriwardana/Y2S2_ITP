@@ -16,20 +16,7 @@ function CustomerProductsContent(props) {
     }, [props.products])
 
     return (
-        <React.Fragment>
-
-        
-             {/* <div className=" ltn__search-widget w-25">
-                <center><h4>Search Products</h4></center>
-                    <form action="#">
-                        <input type="text" name="search" placeholder="Search your product..." />
-                            <button type="submit"><i class="fas fa-search"></i></button>
-                    </form>
-            </div> 
-        </center>
-
-        <br /> */}
-                              
+        <React.Fragment>                              
                                     
     {/* <!-- PRODUCT DETAILS AREA START --> */}             
 
@@ -108,7 +95,6 @@ function CustomerProductsContent(props) {
                         </div>
                     </div>
                 </div>
-                {/* <!-- FEATURE AREA END --> */}
 
 
 

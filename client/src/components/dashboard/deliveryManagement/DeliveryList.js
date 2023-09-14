@@ -31,7 +31,6 @@ function Deliveries(props) {
     const json = await response.json();
 
     if (!response.ok) {
-      // alert("Update failed please try again.");
       setOrderDeliveringAllAlertError(
         <>
           <div className="alert alert-danger alert-dismissible fade show" role="alert">
@@ -48,10 +47,7 @@ function Deliveries(props) {
       }, 2000);
     }
 
-    if (response.ok) {
-      // alert(
-      //   "delivery status update as Delivering for Delivery ID : " + orderId
-      // );
+    if (response.ok) {      
       setOrderDeliveringAllAlert(
         <>
           <div className="alert alert-success alert-dismissible fade show" role="alert">
@@ -112,9 +108,7 @@ function Deliveries(props) {
                       <th scope="col">Date</th>
                       <th scope="col">Order Status</th>
                       <th scope="col">Delivery Status</th>
-                      {/* <th scope="col">packaging</th> */}
                       <th scope="col">Delivering</th>
-                      {/* <th scope="col">Completed</th> */}
                     </tr>
                   </thead>
                   <tbody style={{ fontSize: 15 }}>
@@ -129,18 +123,6 @@ function Deliveries(props) {
                           <td>{order.Date}</td>
                           <td>{order.Status}</td>
                           <td>{order.DelevaryStatus}</td>
-                          {/* <td>{order.Date}</td> */}
-                          {/* <td>
-                            <button
-                              type="button"
-                              class="btn btn-danger"
-                              onClick={() => {
-                                handleUpdatepackaging(delivery._id);
-                              }}
-                            >
-                              <i class="bi bi-box"></i>
-                            </button>
-                          </td> */}
                           <td>
                             <button type="button" class="btn btn-warning" onClick={() => {
                               handleUpdateontheway(order._id);
@@ -148,22 +130,7 @@ function Deliveries(props) {
                               <i style={{ color: "white" }} class="bi bi-truck-front-fill"></i>
                             </button>
                           </td>
-                          {/* <td><button type="button" class="btn btn-success">Completed</button></td> */}
-                          {/* <td>
-                            <button type="button" class="btn btn-success" onClick={() => {
-                              handleUpdateCompleted(order._id);
-                            }}>
-                              <i class="bi bi-check2-square"></i>
-                            </button>
-                          </td> */}
-
-                          {/* <td>
-                            <Link
-                              to={{ pathname: `/${order._id}/trackorder` }}
-                            >
-                              u
-                            </Link>
-                          </td> */}
+                        
                         </tr>
                       ))}
                   </tbody>
@@ -173,7 +140,6 @@ function Deliveries(props) {
             </div>
           </div>
         </div>
-        {/* style={{display: "none" , visibility: "hidden"}} */}
       </section>
     </main>
   );

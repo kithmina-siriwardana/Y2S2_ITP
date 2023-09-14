@@ -11,8 +11,6 @@ function Header() {
     }
     
 
-    // 👇️ toggle class on the body element
-    // document.body.classList.toggle('bg-salmon');
   };
   return (
         <header id="header" className="header fixed-top d-flex align-items-center">
@@ -24,7 +22,6 @@ function Header() {
       </a>
       <i className="bi bi-list toggle-sidebar-btn" onClick={handleClick}></i>
     </div>
-    {/* <!-- End Logo --> */}
 
     
   </header>

@@ -24,7 +24,6 @@ function EmployeeAccount() {
     });
 
     console.log("User log " + employee)
-    //var customer = null
     const [staff, setStaff] = useState(
         {
             email: "",
@@ -41,14 +40,9 @@ function EmployeeAccount() {
 
     useEffect(() => {
         const fetchStaff = async () => {
-            // fetch(`/api/users/${id}`)
-            // .then(res => res.json)
-            // .then(data => setCustomer(data))
             const response = await fetch(`/api/employees/${employee.id}`)
             const json = await response.json()
-            //console.log(json["name"])
             if (response.ok) {
-                //console.log("json "+json["name"])
                 setStaff(
                     {
                         email: `${json["email"]}`,
