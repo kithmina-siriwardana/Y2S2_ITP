@@ -1,18 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { AuthContextProvider } from './context/AuthContext';
-import { EmployeeAuthContextProvider } from './context/EmpAuthContext';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { AuthContextProvider } from "./context/AuthContext";
+import { EmployeeAuthContextProvider } from "./context/EmpAuthContext";
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
-
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+const clientId = '290106904765-vke1mpl5c8ui4iushpte4f6ft5oe4drf.apps.googleusercontent.com';
 root.render(
   <React.StrictMode>
     <AuthContextProvider>
       <EmployeeAuthContextProvider>
-        <App />
+        <GoogleOAuthProvider clientId={clientId}>
+          <App />
+        </GoogleOAuthProvider>
       </EmployeeAuthContextProvider>
     </AuthContextProvider>
   </React.StrictMode>
