@@ -3,9 +3,14 @@ require('dotenv').config()
 const express = require('express')
 const multer = require('multer')
 
+const passport = require('passport') // Added for passport
+const session = require('express-session') // Added for session management
+const GoogleStrategy = require('passport-google-oauth20').Strategy // Added for Google OAuth
+
 const userRoutes = require('./routes/userRoutes')
 const siteFeedbacks = require('./routes/SiteFeedbackRoutes')
 
+const User = require('./models/User')  // Assuming you have a User model
 
 const E_billRoutes = require('./routes/E_billRoutes')
 const Payments = require('./routes/Payment')
@@ -47,10 +52,22 @@ const app = express()
 // middleware
 app.use(express.json())
 app.use((req, res, next) => {
-  console.log(req.path, req.method)
-  next()
-})
+  res.setHeader("Cross-Origin-Opener-Policy", "same-origin");
+  res.setHeader("Cross-Origin-Embedder-Policy", "require-corp");
+  res.setHeader("Cross-Origin-Resource-Policy", "same-origin");
+  next();
+});
 app.use(cors())
+
+// Google OAuth Routes
+app.get('/api/users/auth/google', passport.authenticate('google', { scope: ['profile', 'email'] }))
+app.get('/api/users/auth/google/callback',
+  passport.authenticate('google', { failureRedirect: '/login' }),
+  (req, res) => {
+    const token = createToken(req.user._id) // Assuming you have a token generation logic
+    res.redirect(`/account?token=${token}`) // Redirect with token
+  }
+)
 
 // routes
 app.use('/api/users', userRoutes)
@@ -95,7 +112,6 @@ app.use('/api/inventoryProducts', inventoryProductRoutes)
 app.use('/api/inventoryRawMaterials', inventoryRawMaterialRoutes)
 //inventory related routes for product orders from the inventory
 app.use('/api/inventoryProductOrder', inventoryProductOrderRoutes)
-
 
 /***************************For image uploading ***************************************/
 
